@@ -1,4 +1,3 @@
-import { async } from "@firebase/util";
 import { createUserWithEmailAndPassword, signInWithEmailAndPassword, signInWithPopup, signOut, updateProfile } from "firebase/auth";
 import Swal from "sweetalert2";
 import { auth, facebookAuthProvider, githubAuthProvider, googleAuthProvider } from "../firebase/firebase-config";
