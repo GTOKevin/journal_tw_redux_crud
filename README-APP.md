@@ -40,8 +40,22 @@ npm i --save @fortawesome/free-solid-svg-icons
 npm i --save @fortawesome/free-regular-svg-icons
 npm i --save @fortawesome/react-fontawesome@latest
 
+<!-- MANEJO DE FECHAS  -->
+https://momentjs.com/
+npm install moment --save 
 
 
+<!-- TODOS LOS NPM USADOS EN EL PROYECTO  -->
+npm install react-redux
+npm install firebase
+npm install redux-thunk
+npm install react-router-dom@6
+npm i validator
+npm i --save @fortawesome/fontawesome-svg-core
+npm i --save @fortawesome/free-solid-svg-icons
+npm i --save @fortawesome/free-regular-svg-icons
+npm i --save @fortawesome/react-fontawesome@latest
+npm install moment --save 
 <!-- VERSIONES -->
     "firebase": "^9.6.8",
     "react": "^17.0.2",

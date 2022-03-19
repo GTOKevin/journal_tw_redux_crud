@@ -1,16 +1,21 @@
 import React from 'react'
-import { useDispatch } from 'react-redux'
-import { Navigate } from 'react-router-dom';
+import { useDispatch, useSelector } from 'react-redux'
 import { startLogout } from '../../actions/auth';
+import { startNewNote } from '../../actions/notes';
 import { JournalEntries } from './JournalEntries'
 
 export const Sidebar = () => {
 
    const dispatch = useDispatch();
 
+   const {name}=useSelector(state=>state.auth);
+
    const handleLogout=()=>{
        dispatch(startLogout());
-        <Navigate to="/auth/login" /> 
+   }
+
+   const handleAddnNew=()=>{
+       dispatch(startNewNote());
    }
 
     return (
@@ -19,7 +24,7 @@ export const Sidebar = () => {
             <div className="flex justify-between">
                 <h3 className="mt-5 font-light">
                     <i className="far fa-moon"></i>
-                    <span> Fernando</span>
+                    <span> {name}</span>
                 </h3>
 
                 <button className="btn" onClick={handleLogout}>
@@ -27,7 +32,8 @@ export const Sidebar = () => {
                 </button>
             </div>
 
-            <div className="items-center cursor-pointer flex justify-center mt-8 w-full flex-col transition duration-300 ease-in-out hover:text-gray-400">
+            <div className="items-center cursor-pointer flex justify-center mt-8 w-full flex-col transition duration-300 ease-in-out hover:text-gray-400"
+            onClick={handleAddnNew}>
                 <i className="far fa-calendar-plus fa-5x"></i>
                 <p className="mt-5">
                     New entry

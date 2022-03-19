@@ -47,7 +47,7 @@ export const LoginScreen = () => {
         <>
             <h3 className="font-bold text-3xl text-center mb-3 text-white">Login</h3>
 
-                    <form onSubmit={handleLogin}>
+                    <form onSubmit={handleLogin} className="animate__animated animate__fadeIn animate__faster">
 
                         <input  
                             type="text"
